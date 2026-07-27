@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#0d1020" />
+  <title>GlowUp AI — персональный план улучшений</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="noise"></div>
+
+  <header class="topbar">
+    <a class="brand" href="#home" aria-label="GlowUp AI">
+      <span class="brand-mark">G</span>
+      <span>GlowUp <b>AI</b></span>
+    </a>
+
+    <nav class="desktop-nav" aria-label="Основная навигация">
+      <a href="#how">Как работает</a>
+      <a href="#directions">Направления</a>
+      <a href="#assistants">Помощники</a>
+      <a href="#plan">Мой план</a>
+    </nav>
+
+    <button class="ghost-btn" id="openDemoBtn">Попробовать</button>
+  </header>
+
+  <main>
+    <section class="hero section" id="home">
+      <div class="hero-copy">
+        <span class="eyebrow">Твоя лучшая версия — без оценок внешности</span>
+        <h1>Glow Up начинается с понятного плана</h1>
+        <p>
+          Загрузи фотографию, выбери цель и получи персональные рекомендации
+          по уходу, стилю, спорту, осанке и полезным привычкам.
+        </p>
+        <div class="hero-actions">
+          <button class="primary-btn" id="startBtn">Начать бесплатно</button>
+          <a class="text-link" href="#how">Посмотреть, как работает →</a>
+        </div>
+        <div class="trust-row">
+          <span>✓ Без рейтинга красоты</span>
+          <span>✓ Фото под твоим контролем</span>
+          <span>✓ Поддерживающая обратная связь</span>
+        </div>
+      </div>
+
+      <div class="hero-visual">
+        <div class="orb orb-one"></div>
+        <div class="orb orb-two"></div>
+
+        <article class="phone-card">
+          <div class="phone-top">
+            <span>GlowUp AI</span>
+            <span class="status-dot"></span>
+          </div>
+
+          <div class="scan-frame">
+            <div class="scan-line"></div>
+            <div class="avatar-placeholder">
+              <div class="avatar-head"></div>
+              <div class="avatar-body"></div>
+            </div>
+            <span class="scan-tag tag-one">Осанка</span>
+            <span class="scan-tag tag-two">Стиль</span>
+            <span class="scan-tag tag-three">Уход</span>
+          </div>
+
+          <div class="mini-result">
+            <div>
+              <small>Персональный фокус</small>
+              <strong>Уверенная осанка</strong>
+            </div>
+            <span>+12%</span>
+          </div>
+
+          <div class="progress-line"><i style="width:68%"></i></div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="how">
+      <div class="section-heading">
+        <span class="eyebrow">Просто и понятно</span>
+        <h2>Как работает GlowUp AI</h2>
+      </div>
+
+      <div class="steps-grid">
+        <article class="step-card">
+          <span class="step-number">01</span>
+          <h3>Загрузи фото</h3>
+          <p>Добавь фотографию или начни без неё, указав свои цели вручную.</p>
+        </article>
+        <article class="step-card">
+          <span class="step-number">02</span>
+          <h3>Получи разбор</h3>
+          <p>Система покажет сильные стороны и зоны, на которых стоит сфокусироваться.</p>
+        </article>
+        <article class="step-card">
+          <span class="step-number">03</span>
+          <h3>Следуй плану</h3>
+          <p>Выполняй короткие задания и отслеживай изменения без давления.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="directions">
+      <div class="section-heading split-heading">
+        <div>
+          <span class="eyebrow">Комплексный подход</span>
+          <h2>Пять направлений Glow Up</h2>
+        </div>
+        <p>Каждое направление можно проходить отдельно или объединить в персональную программу.</p>
+      </div>
+
+      <div class="directions-grid">
+        <button class="direction-card active" data-direction="sport">
+          <span class="direction-icon">◒</span>
+          <h3>Спорт</h3>
+          <p>Короткие тренировки, сила, мобильность и энергия.</p>
+        </button>
+        <button class="direction-card" data-direction="posture">
+          <span class="direction-icon">↟</span>
+          <h3>Осанка</h3>
+          <p>Уверенная походка, положение плеч и шеи.</p>
+        </button>
+        <button class="direction-card" data-direction="care">
+          <span class="direction-icon">✦</span>
+          <h3>Уход</h3>
+          <p>Базовые понятные ритуалы без перегруженных схем.</p>
+        </button>
+        <button class="direction-card" data-direction="style">
+          <span class="direction-icon">◇</span>
+          <h3>Стиль</h3>
+          <p>Образы, сочетания и детали, которые подчёркивают индивидуальность.</p>
+        </button>
+        <button class="direction-card" data-direction="habits">
+          <span class="direction-icon">✓</span>
+          <h3>Привычки</h3>
+          <p>Сон, вода, режим и небольшие действия с накопительным эффектом.</p>
+        </button>
+      </div>
+
+      <div class="direction-preview">
+        <div>
+          <span class="preview-label" id="previewLabel">СПОРТ</span>
+          <h3 id="previewTitle">Стань сильнее без перегрузки</h3>
+          <p id="previewText">Персональный комплекс на 10–20 минут с постепенным ростом нагрузки.</p>
+        </div>
+        <div class="preview-metrics">
+          <div><strong id="metricOne">12 мин</strong><span>в день</span></div>
+          <div><strong id="metricTwo">3</strong><span>упражнения</span></div>
+          <div><strong id="metricThree">Легко</strong><span>уровень старта</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section assistants-section" id="assistants">
+      <div class="section-heading split-heading">
+        <div>
+          <span class="eyebrow">Не просто чат</span>
+          <h2>Твои AI-помощники</h2>
+        </div>
+        <p>Каждый помощник отвечает за своё направление и реагирует на твой прогресс.</p>
+      </div>
+
+      <div class="assistant-layout">
+        <div class="assistant-stage" id="assistantStage">
+          <div class="reaction-burst" id="reactionBurst"></div>
+          <div class="mascot" id="mascot" aria-label="Алекс, спортивный помощник">
+            <div class="mascot-hair"></div>
+            <div class="mascot-head">
+              <span class="eye left"></span>
+              <span class="eye right"></span>
+              <span class="mouth"></span>
+            </div>
+            <div class="mascot-body">
+              <div class="arm left-arm"><span class="muscle"></span></div>
+              <div class="torso"><span>G</span></div>
+              <div class="arm right-arm"><span class="muscle"></span></div>
+            </div>
+          </div>
+          <div class="speech-bubble" id="speechBubble">
+            Готов? Сегодня сделаем один небольшой шаг к твоей цели.
+          </div>
+          <div class="reaction-controls">
+            <button class="success-btn" id="successBtn">Показать удачу</button>
+            <button class="retry-btn" id="retryBtn">Показать неудачу</button>
+          </div>
+        </div>
+
+        <div class="assistant-list">
+          <button class="assistant-item active" data-helper="alex">
+            <span class="helper-avatar">A</span>
+            <span><strong>Алекс</strong><small>Спорт и энергия</small></span>
+          </button>
+          <button class="assistant-item" data-helper="mira">
+            <span class="helper-avatar">M</span>
+            <span><strong>Мира</strong><small>Стиль и образ</small></span>
+          </button>
+          <button class="assistant-item" data-helper="lumi">
+            <span class="helper-avatar">L</span>
+            <span><strong>Луми</strong><small>Уход и свежесть</small></span>
+          </button>
+          <button class="assistant-item" data-helper="leo">
+            <span class="helper-avatar">L</span>
+            <span><strong>Лео</strong><small>Осанка и уверенность</small></span>
+          </button>
+          <button class="assistant-item" data-helper="nova">
+            <span class="helper-avatar">N</span>
+            <span><strong>Нова</strong><small>Привычки и прогресс</small></span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="plan">
+      <div class="dashboard-shell">
+        <div class="dashboard-head">
+          <div>
+            <span class="eyebrow">Демо личного кабинета</span>
+            <h2>Сегодняшний план</h2>
+          </div>
+          <div class="day-chip">День 6</div>
+        </div>
+
+        <div class="dashboard-grid">
+          <article class="today-card">
+            <span class="task-category">ОСАНКА</span>
+            <h3>Раскрытие грудного отдела</h3>
+            <p>Мягкий комплекс для плеч и верхней части спины.</p>
+            <div class="task-footer">
+              <span>8 минут</span>
+              <button class="primary-btn small" id="completeTaskBtn">Выполнено</button>
+            </div>
+          </article>
+
+          <article class="score-card">
+            <small>Прогресс недели</small>
+            <strong id="progressValue">64%</strong>
+            <div class="ring" id="progressRing"><span>4/6</span></div>
+          </article>
+
+          <article class="streak-card">
+            <small>Серия</small>
+            <strong><span id="streakValue">5</span> дней</strong>
+            <p>Ещё один день — и новый личный рекорд.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta-section">
+      <div>
+        <span class="eyebrow">Начни с малого</span>
+        <h2>Твой Glow Up не должен быть идеальным. Он должен быть твоим.</h2>
+      </div>
+      <button class="primary-btn" id="ctaBtn">Создать мой план</button>
+    </section>
+  </main>
+
+  <footer>
+    <a class="brand" href="#home">
+      <span class="brand-mark">G</span>
+      <span>GlowUp <b>AI</b></span>
+    </a>
+    <p>Развлекательный инструмент самопознания и формирования полезных привычек.</p>
+    <span>© 2026 GlowUp AI</span>
+  </footer>
+
+  <div class="modal" id="demoModal" aria-hidden="true">
+    <div class="modal-backdrop" data-close-modal></div>
+    <div class="modal-panel" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <button class="modal-close" data-close-modal aria-label="Закрыть">×</button>
+      <span class="eyebrow">Бесплатный старт</span>
+      <h2 id="modalTitle">Создай мини-разбор</h2>
+      <p>Фото в этой демо-версии не отправляется на сервер.</p>
+
+      <label class="upload-zone" for="photoInput">
+        <input id="photoInput" type="file" accept="image/*" />
+        <span class="upload-icon">＋</span>
+        <strong>Добавить фотографию</strong>
+        <small>JPG, PNG или WEBP</small>
+        <img id="photoPreview" alt="Предпросмотр загруженной фотографии" />
+      </label>
+
+      <label class="field-label" for="goalSelect">Главная цель</label>
+      <select id="goalSelect">
+        <option>Стать увереннее</option>
+        <option>Улучшить осанку</option>
+        <option>Подобрать стиль</option>
+        <option>Выстроить уход</option>
+        <option>Начать тренироваться</option>
+      </select>
+
+      <button class="primary-btn full" id="analyzeBtn">Получить мини-разбор</button>
+
+      <div class="analysis-result" id="analysisResult" aria-live="polite">
+        <div class="loader"><i></i><i></i><i></i></div>
+        <h3>Твои первые направления</h3>
+        <ul>
+          <li><span>01</span> Уверенная осанка и раскрытые плечи</li>
+          <li><span>02</span> Базовый ежедневный ритуал ухода</li>
+          <li><span>03</span> Один акцент в образе вместо полной смены стиля</li>
+        </ul>
+        <button class="success-btn" id="finishDemoBtn">Добавить в план</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
